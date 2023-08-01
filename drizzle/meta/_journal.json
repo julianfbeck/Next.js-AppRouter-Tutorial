@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1690818554196,
+      "tag": "0000_flat_morbius",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1690825823432,
+      "tag": "0001_numerous_archangel",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1690827885182,
+      "tag": "0002_large_blacklash",
+      "breakpoints": true
+    }
+  ]
+}
