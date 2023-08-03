@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { db } from "@/lib/drizzle";
 import { Likes } from "@/lib/schema";
 import { sql } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export default async function LikesCard() {
+  // fetch likes from database on the server
   const likes = (
     await db
       .select({ count: sql<number>`count(*)` })
@@ -17,10 +14,12 @@ export default async function LikesCard() {
       .all()
   )[0].count;
 
+  //server action
   async function likePost() {
     "use server";
     await db.insert(Likes).values({ id: undefined }).run();
 
+    // revalidate cache for this page
     revalidatePath("/4-server-actions");
   }
 

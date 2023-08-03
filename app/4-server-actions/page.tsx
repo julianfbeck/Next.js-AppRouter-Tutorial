@@ -8,6 +8,7 @@ export default async function ServerAction() {
     <main className="space-y-10">
       <LikesCard />
       <CommentsCard />
+
       <Link
         href="/4-server-actions/client-actions"
         className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"

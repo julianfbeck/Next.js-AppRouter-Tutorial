@@ -1,4 +1,4 @@
-"use client";
+"use client"; // make component interactive
 
 import {
   ColumnDef,

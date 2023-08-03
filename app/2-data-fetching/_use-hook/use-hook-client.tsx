@@ -2,11 +2,11 @@
 
 import { columns } from "@/components/columns";
 import { IssueTable } from "@/components/issue-table";
-import { getCurrentWebIssues } from "@/lib/jira";
+import { getWebIssuesFromJiraApi } from "@/lib/jira";
 import { use } from "react";
 
 const getIssues = async () => {
-  const response = await getCurrentWebIssues();
+  const response = await getWebIssuesFromJiraApi();
   return response?.issues || [];
 };
 
